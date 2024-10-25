@@ -1,0 +1,21 @@
+<section>
+  <article>
+    <h2
+      class="transition-colors duration-300 text-text-light dark:text-text-dark font-light leading-[100%] tracking-normal text-40 mb-2">
+      Welcome to the
+    </h2>
+    <h1
+      class="transition-colors duration-300 text-text-light dark:text-text-dark font-medium leading-[100%] tracking-normal text-40 mb-4">
+      Frontend Quiz!
+    </h1>
+    <h3
+      class="transition-colors duration-300 text-text-sub-light dark:text-text-sub-dark italic leading-[150%] tracking-normal text-14 ">
+      Pick a subject to get
+      started.
+    </h3>
+  </article>
+
+  <article class="grid gap-3 mt-10">
+    <app-go-to-quiz-page *ngFor="let quiz of quizElements" [Title]="quiz.title" [Image]="quiz.icon" />
+  </article>
+</section>

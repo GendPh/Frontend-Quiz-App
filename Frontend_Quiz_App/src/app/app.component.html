@@ -1,1 +1,18 @@
-<router-outlet />
+<!-- SVG for circle patter -->
+<figure>
+  <svg class="absolute inset-0 -z-10 pointer-events-none md:hidden" xmlns="http://www.w3.org/2000/svg" width="375"
+    height="812" fill="none" viewBox="0 0 375 812">
+    <circle cx="-113.5" cy="323.5" r="416.5" stroke-width="144" class="stroke-[#EDF1F9] dark:stroke-[#2D3949]" />
+  </svg>
+</figure>
+
+<!-- Header Division -->
+<header class="py-[26px] px-6">
+  <!-- Get the toggle theme component -->
+  <app-toggle-theme />
+</header>
+
+<!-- Main Division -->
+<main class="py-8 px-6">
+  <router-outlet />
+</main>

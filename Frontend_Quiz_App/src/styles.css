@@ -1,3 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  body {
+    @apply bg-background-light dark:bg-background-dark transition-colors duration-150 relative min-h-screen;
+  }
+  svg path,
+  svg circle {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .checkbox-apple {
+    position: relative;
+    width: 32px;
+    height: 20px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .checkbox-apple label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    @apply bg-purple;
+  }
+
+  .checkbox-apple label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translate(0, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    @apply bg-white;
+  }
+
+  .checkbox-apple input[type='checkbox']:checked + label:after {
+    left: calc(100% - 4px - 12px);
+  }
+
+  .checkbox-apple label:hover:after {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .yep {
+    display: none;
+  }
+}
